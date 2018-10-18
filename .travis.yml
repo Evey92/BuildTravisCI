@@ -1,24 +1,36 @@
+dist: trusty
+sudo: require
+
 language: cpp
-
 os: linux
-
-compiler:
-  - clang
-  - gcc
+compiler: 
+    - gcc
+    - clang
   
 addons:
-  apt:
-      sources:
-          - ubuntu-toolchain-r-test
-      packages:
-          - gcc-7
-          - g++-7
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - gcc-7
+            - g++-7
+
+before_script:
+    - mkdir build
+    - cd build
+    - cmake ..
 
 script:
     #Test running script
     make && make test
     #return 0;
 
-    after_script:
+after_script:
     #deploy default Message
     - echo "Finished testing\n Results in "
+after_success:
+    #deploy Success message
+    - echo "success"
+
+after_failure:
+    - echo "failure"
