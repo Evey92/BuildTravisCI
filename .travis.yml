@@ -14,4 +14,11 @@ addons:
           - gcc-7
           - g++-7
 
-script: scons
+script:
+    #Test running script
+    make && make test
+    #return 0;
+
+    after_script:
+    #deploy default Message
+    - echo "Finished testing\n Results in "
