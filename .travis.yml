@@ -37,7 +37,5 @@ matrix:
       source ;
     fi
   - cmake --version
-  - qmake --version
-
 
 script: return 0
