@@ -1,37 +1,19 @@
+dist: trusty
 
 language: cpp
 Compiler: gcc
 
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake-data
+      - cmake
+
 matrix:
   fast_finish: true
   include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-4.9
-      env:
-         - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
-
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
-      env:
-         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
-
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-6
       env:
         - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
 
@@ -41,11 +23,21 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
+            - cmake-data
+            - cmake
+            - gcc-7
             - g++-7
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
-
-before_install:
+  script:
     - eval "${MATRIX_EVAL}"
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      export CC=gcc-7 ;
+      export CXX=g++-7 ;
+      source ;
+    fi
+  - cmake --version
+  - qmake --version
+
 
 script: return 0
