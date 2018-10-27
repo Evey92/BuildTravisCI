@@ -1,18 +1,14 @@
+dist: trusty
 language: cpp
 
-compiler:
-  clang:
-    - 3.5
-    - 3.6
-    - 3.7
-    - 3.8
-    - trunk
-  gcc:
-    - 4.9
-    - 5.0
-    - 6.0
-    - trunk
-
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty-5.0
+    packages:
+      - g++-7
+      - clang-5.0
 stdlib:
   - libc++
   - stdlibc++
@@ -32,4 +28,6 @@ before_script:
   - cd build
   - cmake ..
 
-script: make && make test
+script:
+ -CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake -DCOVERAGE=1 .
+ - cmake --build . 
