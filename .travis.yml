@@ -11,8 +11,8 @@ addons:
     - ubuntu-toolchain-r-test                - llvm-toolchain-precise-3.8
     - llvm-toolchain-precise-3.8
     packages:
-    - g++-7
-    - clang-3.8
+    - g++-4.8
+    - clang-5.0
 install:
 - "[ $CXX = g++ ] && export CXX=g++-7 || true"
 - "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"    
