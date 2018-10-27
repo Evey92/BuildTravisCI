@@ -29,5 +29,4 @@ before_script:
   - cmake ..
 
 script:
- -CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake -DCOVERAGE=1 .
- - cmake --build . 
+ - make 
