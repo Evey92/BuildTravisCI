@@ -8,14 +8,14 @@ os:
 addons: 
   apt:
     sources:
-    - ubuntu-toolchain-r-test                - llvm-toolchain-precise-3.8
+    - ubuntu-toolchain-r-test
     - llvm-toolchain-precise-3.8
     packages:
     - g++-4.8
     - clang-5.0
 install:
-- "[ $CXX = g++ ] && export CXX=g++-7 || true"
-- "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"    
+- "[ $CXX = g++ ] && export CXX=g++-4.8 || true"
+- "[ $CXX = clang++ ] && export CXX=clang++-5.0 || true"    
 before_script:
   - mkdir build
   - cd build
