@@ -6,3 +6,4 @@ add_executable (BuildTravisCI TravisTest/TravisTest/TravisTest.cpp)
 enable_testing()
 
 add_test (BuildTravisCIRuns BuildTravisCI)
+
