@@ -1,8 +1,29 @@
 language: cpp
 
 compiler:
-  - gcc
-  - clang
+  clang:
+    - 3.5
+    - 3.6
+    - 3.7
+    - 3.8
+    - trunk
+  gcc:
+    - 4.9
+    - 5.0
+    - 6.0
+    - trunk
+
+stdlib:
+  - libc++
+  - stdlibc++
+
+std:
+  - c++03
+  - c++11
+  - c++14
+  - c++17
+  - c++-latest
+  
 os:
   -linux
 
