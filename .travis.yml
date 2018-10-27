@@ -14,13 +14,11 @@ addons:
     - gcc-7
     - g++-7
     - clang-3.8
+install:
+- "[ $CXX = g++ ] && export CXX=g++-7 || true"
+- "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"    
 before_script:
   - mkdir build
   - cd build
   - cmake ..
-install:
-- "[ $CXX = g++ ] && export CXX=g++-7 || true"
-- "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"
-script: 
-  -make
-  -make test
+script: make && make test
