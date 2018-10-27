@@ -4,6 +4,14 @@ compiler:
   - gcc
   - clang
 
+os: linux
+  addons:
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+      packages:
+        - g++-7
+
 before_script:
   - mkdir build
   - cd build
