@@ -11,19 +11,8 @@ addons:
       - llvm-toolchain-trusty-5.0
     packages: &precise_latest_boost_packages
       - g++-7
-      - clang-5.0
 
-stdlib:
-  - libc++
-  - stdlibc++
 
-std:
-  - c++03
-  - c++11
-  - c++14
-  - c++17
-  - c++-latest
-  
 before_script:
   - mkdir -p build
   - cd build
