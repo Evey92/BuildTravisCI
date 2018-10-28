@@ -10,10 +10,9 @@ addons:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-5.0
     packages: &precise_latest_boost_packages
-      - gcc-7
       - g++-7
       - clang-5.0
-      - valgrind
+
 stdlib:
   - libc++
   - stdlibc++
@@ -28,10 +27,7 @@ std:
 before_script:
   - mkdir -p build
   - cd build
-  - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .. 
+  - cmake
 
 script:
  - make 
- - make BuildTravisCI_coverage
- after_success:
-    - codecov -t c376990f-2ad6-4f7b-bbdb-5378a52e295c -X gcov
