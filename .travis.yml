@@ -19,5 +19,5 @@ script:
   - cmake --build . 
   - ./tests
 
-  after_success:
-  - coveralls --root . -E ".*CMakeFiles.*" 
+  #after_success:
+  #- coveralls --root . -E ".*CMakeFiles.*" 
