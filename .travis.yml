@@ -42,4 +42,5 @@ before_script:
 
 script:
   - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
+  - cd ${TRAVIS_BUILD_DIR}
   - cmake --build . 
