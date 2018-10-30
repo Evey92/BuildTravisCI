@@ -11,5 +11,7 @@ addons:
       - g++-6
 
 script:
+  - mkdir -p build
+  - cd build
   - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
   - cmake --build . 
