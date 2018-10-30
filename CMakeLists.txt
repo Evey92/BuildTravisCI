@@ -5,7 +5,7 @@ include(gtest.cmake)
 
 SET(COVERAGE OFF CACHE BOOL "Coverage")
 
-add_executable (BuildTravisCI TravisTest/TravisTest/TravisTest.cpp)
+add_executable (BuildTravisCI TravisTest/source/TravisTest.cpp)
 
 find_package (Threads)
 target_link_libraries(BuildTravisCI gtest ${CMAKE_THREAD_LIBS_INIT})
