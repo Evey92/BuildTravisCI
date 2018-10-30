@@ -12,7 +12,5 @@ addons:
       - clang-5.0 
 
 script:
-  - mkdir -p build
-  - cd build
   - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
   - cmake --build . 
