@@ -39,8 +39,9 @@ before_script:
  
  - mkdir build
  - cd build
- - cmake ..
+ 
 
 script:
-  #- cmake --build . 
+  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 
+  - cmake ..
   - make
