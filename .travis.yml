@@ -36,13 +36,14 @@ install:
   - cd ${TRAVIS_BUILD_DIR}
 
 before_script:
- 
+ - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 
  - mkdir build
  - cd build
  
 
 script:
-  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 
   - cmake ..
-  - cd build
   - make
+
+  after_install:
+    .(BuildTravisCI)
