@@ -9,6 +9,6 @@ include_directories(${COMMON_INCLUDES})
 find_package (Threads)
 target_link_libraries(BuildTravisCI gtest ${CMAKE_THREAD_LIBS_INIT})
 
-set(TARGET_SRC ${PROJECT_SOURCE_DIR}TravisTest/source/TravisTest.cpp)
+set(TARGET_SRC .TravisTest.cpp)
 
 add_executable((BuildTravisCI ${TARGET_SRC})
