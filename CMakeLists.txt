@@ -11,4 +11,4 @@ target_link_libraries(BuildTravisCI gtest ${CMAKE_THREAD_LIBS_INIT})
 
 set(TARGET_SRC .TravisTest.cpp)
 
-add_executable((BuildTravisCI ${TARGET_SRC})
+add_executable(BuildTravisCI ${TARGET_SRC})
