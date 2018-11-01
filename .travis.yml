@@ -9,8 +9,9 @@ addons:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-5.0
     packages:
-      - g++-6
-       - cmake
+      - gcc-7
+      - g++-7
+      - cmake
 
 
 
@@ -44,6 +45,4 @@ before_script:
 script:
   - cmake ..
   - make
-
-after_install:
-  -.(BuildTravisCI)
+  - ./BuildTravisCI

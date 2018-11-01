@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Ivan\Documents\UAD\7mo Cuatri\Pruebas &amp; cotnrol de calidad\BuildTravisCI\TravisTest\externals\googletest\src\gtest-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Ivan\Documents\UAD\7mo Cuatri\Pruebas &amp; cotnrol de calidad\BuildTravisCI\TravisTest\externals\googletest\src\gtest_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Ivan\Documents\UAD\7mo Cuatri\Pruebas &amp; cotnrol de calidad\BuildTravisCI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6435CCB4-F0B9-3D9A-B0BC-CAF10F4E89C5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
