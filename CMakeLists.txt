@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+include(gtest.cmake)
+
+project(BuildTravisCI)
+
+set(CMAKE_CXX_FLAGS)
 
 set(CMAKE_BUILD_TYPE Debug)
 
-include(gtest.cmake)
+
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 include_directories(${COMMON_INCLUDES})
 
-project (BuildTravisCI)
+set(CMAKE_BUILD_TYPE Debug)
+
 set(TARGET_SRC TravisTest/source/TravisTest.cpp)
 
 add_executable(BuildTravisCI ${TARGET_SRC})
