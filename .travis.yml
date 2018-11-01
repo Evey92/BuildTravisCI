@@ -37,7 +37,7 @@ install:
   - cd ${TRAVIS_BUILD_DIR}
 
 before_script:
- - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 
+ - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7 
  - mkdir build
  - cd build
  
