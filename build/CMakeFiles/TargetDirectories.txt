@@ -1,4 +1,0 @@
-C:/Users/Ivan/Documents/UAD/7mo Cuatri/Pruebas & cotnrol de calidad/BuildTravisCI/build/CMakeFiles/BuildTravisCI.dir
-C:/Users/Ivan/Documents/UAD/7mo Cuatri/Pruebas & cotnrol de calidad/BuildTravisCI/build/CMakeFiles/gtest.dir
-C:/Users/Ivan/Documents/UAD/7mo Cuatri/Pruebas & cotnrol de calidad/BuildTravisCI/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Ivan/Documents/UAD/7mo Cuatri/Pruebas & cotnrol de calidad/BuildTravisCI/build/CMakeFiles/ZERO_CHECK.dir
