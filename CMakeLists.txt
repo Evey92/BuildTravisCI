@@ -7,13 +7,7 @@ set(CMAKE_CXX_FLAGS)
 
 set(CMAKE_BUILD_TYPE Debug)
 
-
-set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
-include_directories(${COMMON_INCLUDES})
-
-set(CMAKE_BUILD_TYPE Debug)
-
-set(TARGET_SRC TravisTest/source/TravisTest.cpp)
+set(TARGET_SRC ./TravisTest.cpp)
 
 add_executable(BuildTravisCI ${TARGET_SRC})
 
